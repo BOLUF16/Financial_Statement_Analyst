@@ -1,0 +1,12 @@
+llama-index-core
+llama-index-readers-file
+llama-index-embeddings-huggingface==0.2.3
+langchain-mongodb
+langchain-core
+langchain-community
+langchain-groq
+fastapi
+uvicorn
+streamlit
+pymongo
+python-dotenv
