@@ -10,19 +10,19 @@ models = [
 ]
 
 # Backend URLs for file upload and chat generation services
-BACKEND_URL_1 = "http://127.0.0.1:5000" # API for file upload
-BACKEND_URL_2 = "http://127.0.0.1:9000"  # API for chat generation
+BACKEND_URL = "http://127.0.0.1:5000" # API for file upload and chat generation
+
 
 # Function to upload files to the backend
 def upload_files(files):
-    url = f"{BACKEND_URL_1}/upload"
+    url = f"{BACKEND_URL}/upload"
     files_data = [("files", file) for file in files]
     response = requests.post(url, files=files_data)
     return response.json()
 
 # Function to generate chat response by interacting with backend
 def generate_chat(question, model, temperature, session_id):
-    url = f"{BACKEND_URL_2}/generate"
+    url = f"{BACKEND_URL}/generate"
     payload = {
         "question": question,
         "model": model,
